@@ -1,10 +1,11 @@
+import { AutenticacionGuardService } from './services/autenticacion-guard.service';
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'folder/Categorias',
     pathMatch: 'full'
   },
   {
@@ -18,6 +19,11 @@ const routes: Routes = [
   {
     path: 'registro',
     loadChildren: () => import('./registro/registro.module').then( m => m.RegistroPageModule)
+  },
+  {
+    path: 'prueba',
+    loadChildren: () => import('./prueba/prueba.module').then( m => m.PruebaPageModule),
+    canActivate: [AutenticacionGuardService]
   }
 ];
 
