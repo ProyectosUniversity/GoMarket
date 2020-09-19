@@ -26,3 +26,16 @@ codigo extra
 
 <ion-button class="btnlogin" shape="round" routerLink="/folder/inbox" expand="full" >Iniciar Sesión</ion-button>
   <ion-button class="btnregistro" shape="round" routerLink="/registro" expand="full" fill="outline">Registrarse</ion-button>
+
+  folder page
+
+  <div id="container">
+    
+    <strong class="capitalize">{{ folder }}</strong>
+    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  </div>
+
+
+  ionic g c components/categorias/productos --export --spec=false --dry-run
+
+  ionic g c components/categorias/productos --export --spec=false

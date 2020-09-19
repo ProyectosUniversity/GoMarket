@@ -57,7 +57,7 @@ export class AppComponent implements OnInit {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
-
+      //Validar Autenticación
       this.autenticacionService.authenticationState.subscribe(state => {
         if (state) {
           this.router.navigate(['prueba']);
