@@ -1,17 +1,48 @@
-<ion-header [translucent]="true">
+<ion-header [translucent]="true" class="ion-no-border">
   <ion-toolbar>
-    
-    <ion-title>
-      Presupuesto
-    </ion-title>
-
     <ion-buttons slot="start">
-      <ion-menu-button menu="main-menu"></ion-menu-button>
+      <ion-menu-button menu="main-menu" color="primary"></ion-menu-button>
     </ion-buttons>
 
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content >
+    <ion-grid>
+      <ion-row class="ion-justify-content-center">
+            <h1>Presupuesto</h1>
+            <h1 class="presupuesto">S/.270.0</h1>
+      </ion-row>
+      <ion-list>
+        <ion-list-header>
+          Pedidos Realizados
+        </ion-list-header>
 
+        
+        <ion-item>
+          <ion-avatar slot="start">
+            <img src="../../../assets/img/carnes.jpg">
+          </ion-avatar>
+          <ion-label>Señora</ion-label>
+          <ion-label slot="end" color="primary">S/.25</ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-avatar slot="start">
+            <img src="../../../assets/img/carnes.jpg">
+          </ion-avatar>
+          <ion-label>Señora</ion-label>
+          <ion-label slot="end" color="primary">S/.25</ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-avatar slot="start">
+            <img src="../../../assets/img/carnes.jpg">
+          </ion-avatar>
+          <ion-label>Señora</ion-label>
+          <ion-label slot="end" color="primary">S/.25</ion-label>
+        </ion-item>
+
+      </ion-list>
+    </ion-grid>
 </ion-content>

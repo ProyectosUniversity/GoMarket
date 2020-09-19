@@ -1,3 +1,4 @@
+import { ListaDeComprasComponent } from './reservas/lista-de-compras/lista-de-compras.component';
 import { VendedoresComponent } from './categorias/vendedores/vendedores.component';
 import { ProductosComponent } from './categorias/productos/productos.component';
 import { InicioComponent } from './categorias/inicio/inicio.component';
@@ -12,13 +13,15 @@ import { CommonModule } from '@angular/common';
     MenuComponent,
     InicioComponent,
     ProductosComponent,
-    VendedoresComponent
+    VendedoresComponent,
+    ListaDeComprasComponent
   ],
   exports:[
     MenuComponent,
     InicioComponent,
     ProductosComponent,
-    VendedoresComponent
+    VendedoresComponent,
+    ListaDeComprasComponent
   ],
   imports: [
     IonicModule,

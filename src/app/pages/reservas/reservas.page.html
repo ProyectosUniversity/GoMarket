@@ -1,17 +1,44 @@
-<ion-header [translucent]="true">
+<ion-header [translucent]="true" class="ion-no-border">
   <ion-toolbar>
     
-    <ion-title>
-      Reservas
+    <ion-title color="primary">
+      Reservaciones
     </ion-title>
 
     <ion-buttons slot="start">
-      <ion-menu-button menu="main-menu"></ion-menu-button>
+      <ion-menu-button menu="main-menu" color="primary"></ion-menu-button>
     </ion-buttons>
 
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content> 
+    
+  <ion-list>
 
+    <ion-item routerLink="/pedido">
+      <ion-avatar slot="start">
+        <img src="../../../assets/img/carnes.jpg">
+      </ion-avatar>
+      <ion-label>Señora</ion-label>
+      <ion-icon slot="end" name="chevron-forward"></ion-icon>
+    </ion-item>
+
+    <ion-item routerLink=""> 
+      <ion-avatar slot="start">
+        <img src="../../../assets/img/carnes.jpg">
+      </ion-avatar>
+      <ion-label>Señora</ion-label>
+      <ion-icon slot="end" name="chevron-forward"></ion-icon>
+    </ion-item>
+    
+    <ion-item routerLink="">
+      <ion-avatar slot="start">
+        <img src="../../../assets/img/carnes.jpg">
+      </ion-avatar>
+      <ion-label>Señora</ion-label>
+      <ion-icon slot="end" name="chevron-forward"></ion-icon>
+    </ion-item>
+
+  </ion-list>
 </ion-content>
