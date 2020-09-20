@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { ListaDeComprasComponent } from './reservas/lista-de-compras/lista-de-compras.component';
 import { VendedoresComponent } from './categorias/vendedores/vendedores.component';
 import { ProductosComponent } from './categorias/productos/productos.component';
@@ -26,7 +27,8 @@ import { CommonModule } from '@angular/common';
   imports: [
     IonicModule,
     CommonModule,
-    RouterModule
+    RouterModule,
+    FormsModule
   ]
 })
 export class ComponentsModule { }

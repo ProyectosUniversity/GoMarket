@@ -31,10 +31,7 @@
         </ion-item>
      
         <ion-button class="btnlogin" shape="round" expand="full" type="submit" [disabled]="!credentialsForm.valid">Login</ion-button>
-        <ion-button class="btnregistro" shape="round" expand="full" type="button" (click)="register()" [disabled]="!credentialsForm.valid">Register</ion-button>
-        <ion-button routerLink="/categorias">
-          entra
-        </ion-button>
+        <ion-button class="btnregistro" shape="round" expand="full" routerLink="/registro">Register</ion-button>
      
       </form>
       

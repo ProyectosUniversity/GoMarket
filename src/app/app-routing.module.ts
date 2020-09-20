@@ -18,8 +18,7 @@ const routes: Routes = [
   },
   {
     path: 'prueba',
-    loadChildren: () => import('./prueba/prueba.module').then( m => m.PruebaPageModule),
-    canActivate: [AutenticacionGuardService]
+    loadChildren: () => import('./prueba/prueba.module').then( m => m.PruebaPageModule)
   },
   {
     path: 'principal',
@@ -39,7 +38,8 @@ const routes: Routes = [
   },
   {
     path: 'categorias',
-    loadChildren: () => import('./pages/categorias/categorias.module').then( m => m.CategoriasPageModule)
+    loadChildren: () => import('./pages/categorias/categorias.module').then( m => m.CategoriasPageModule),
+    canActivate: [AutenticacionGuardService]
   },
   {
     path: 'puestos',

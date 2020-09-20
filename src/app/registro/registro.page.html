@@ -8,43 +8,29 @@
   </ion-toolbar>
 </ion-header>
 
-
-<ion-content class="bg" padding>
-  
-  <ion-grid>
+<ion-content>
   <!--Logo GoMarket-->
-      <ion-row class="ion-justify-content-center">
-        <ion-col size="12">
+  <form [formGroup]="credentialsForm" (ngSubmit)="onSubmit()">
         <ion-item>
           <ion-label position="floating">Nombre</ion-label>
-          <ion-input maxlength="100"></ion-input>
+          <ion-input maxlength="100" ></ion-input>
         </ion-item>
-      </ion-col>
-      </ion-row>
 
-      <ion-row class="ion-justify-content-center">
-        <ion-col size="12">
         <ion-item>
-          <ion-label position="floating">Ingrese su correo</ion-label>
-          <ion-input maxlength="100"></ion-input>
+          <ion-label position="floating">Correo Electrónico</ion-label>
+          <ion-input type="email" formControlName="email"></ion-input>
         </ion-item>
-      </ion-col>
-      </ion-row>
   
-      <ion-row class="ion-justify-content-center">
-        <ion-col size="12">
+        
         <ion-item>
           <ion-label position="floating" >Contraseña</ion-label>
-          <ion-input type="password"></ion-input>
+          <ion-input type="password" formControlName="password"></ion-input>
         </ion-item>
-        </ion-col>
-      </ion-row>
-  </ion-grid>
   
   
     <!--/Logo GoMarket-->
   
-  <ion-button class="btnlogin" shape="round" routerLink="./../tab1" expand="full" >Registrar Cuenta</ion-button>
+  <ion-button class="btnlogin" shape="round" expand="full" type="submit" (click)="register()" [disabled]="!credentialsForm.valid">Registrar Cuenta</ion-button>
   
-  
+</form>
 </ion-content>

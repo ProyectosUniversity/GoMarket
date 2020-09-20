@@ -60,13 +60,23 @@ export class AppComponent implements OnInit {
       //Validar Autenticación
       this.autenticacionService.authenticationState.subscribe(state => {
         if (state) {
-          this.router.navigate(['prueba']);
+          this.router.navigate(['categorias']);
         } else {
           this.router.navigate(['login']);
         }
       });
 
+      //Verificar si la aplicacion esta en modo oscuro
+      this.revisarTemaOscuro();
+
     });
+  }
+
+  revisarTemaOscuro(){
+      const darkPorDefecto= window.matchMedia('(prefers-color-scheme: dark)');
+      if(darkPorDefecto.matches){
+        document.body.classList.toggle('dark');
+      }
   }
 
   ngOnInit() {

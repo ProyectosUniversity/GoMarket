@@ -1,3 +1,4 @@
+import { AutenticacionService } from './../../services/autenticacion.service';
 import { Router, RouterEvent } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -11,22 +12,22 @@ export class MenuComponent implements OnInit {
 
   componentes= [
     {
-      "icon": "mail", 
+      "icon": "person", 
       "name": "Mi Perfil",
       "url": "/perfil"
     },
     {
-      "icon": "mail", 
+      "icon": "restaurant", 
       "name": "Categorias",
       "url": "/categorias"
     },
     {
-      "icon": "mail", 
+      "icon": "cart", 
       "name": "Reservas",
       "url": "/reservas"
     },
     {
-      "icon": "mail", 
+      "icon": "pie-chart", 
       "name": "Presupuesto",
       "url": "/presupuesto"
     }
@@ -34,13 +35,24 @@ export class MenuComponent implements OnInit {
 
   selectedPath='';
 
+temaOscuro: boolean=true;
 //seleccionar ruta
-constructor(private router: Router) {
+constructor(private router: Router, private autenticacionService: AutenticacionService) {
   this.router.events.subscribe((event:RouterEvent)=> {
     this.selectedPath= event.url;
   })
  }
+ 
+ //Activar Modo Oscuro
+  activarTemOscuro(){
+    this.temaOscuro= !this.temaOscuro;
+    document.body.classList.toggle('dark');
+  }
 
+  //Cerrar Sesion
+  cerrarSesion() {
+    this.autenticacionService.logout();
+  }
 
   ngOnInit() {
   }

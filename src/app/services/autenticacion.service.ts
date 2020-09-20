@@ -72,7 +72,7 @@ export class AutenticacionService {
   }
   //Obetener Información
   getSpecialData() {
-    return this.http.get(`${this.url}/prueba`).pipe(
+    return this.http.get(`${this.url}/special`).pipe(
       catchError(e => {
         let status = e.status;
         if (status === 401) {

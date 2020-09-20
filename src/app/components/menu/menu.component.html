@@ -4,32 +4,47 @@
 
    <div class="header-content">
      
-     <img src="../assets/icon/favicon.png" alt="">
+     <ion-avatar>
+      <img src="../assets/img/man.png" alt="">
+     </ion-avatar>
      <ion-label>
-       <h2>Comprador </h2>
-       <p>Nose wey :v</p>
+       <h2>Marcos </h2>
+       <p>Marquitos@gmail.com</p>
      </ion-label>
    </div>
-
+<!--
    <div class="action-button">
      <ion-button >
        <ion-icon slot="start" name="add"></ion-icon>
        Modo Oscuro
      </ion-button>
-   </div>
+   </div> -->
+   <ion-list>
+     <ion-item>
+       <ion-icon slot="start" name="moon"></ion-icon>
+       <ion-label>Modo Oscuro</ion-label>
+       <!--opciones adicionales [ngModel]= "temaOscuro" [checked]="temaOscuro"-->
+       <ion-toggle slot="end"   (ionChange) = "activarTemOscuro()"></ion-toggle>
+     </ion-item>
+   </ion-list>
 
    <ion-list lines="none" class="menu-items">
-     
-     
+      
      <ion-menu-toggle *ngFor="let c of componentes">
        
       <ion-item [routerLink]="c.url" [class.active]="selectedPath === c.url">
        <ion-icon slot="start"  [name]="c.icon"></ion-icon>
        <ion-label>{{ c.name }}</ion-label>
       </ion-item>
-        
+  
      </ion-menu-toggle>
-    
+      
+    <ion-menu-toggle>
+      <ion-item (click)="cerrarSesion()" routerLink="#">
+        <ion-icon slot="start" name="log-out" ></ion-icon>
+        <ion-label>Cerrar Sesi&oacute;n</ion-label>
+      </ion-item>
+    </ion-menu-toggle>
       
    </ion-list>
 

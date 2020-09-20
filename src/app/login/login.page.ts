@@ -24,11 +24,6 @@ export class LoginPage implements OnInit {
     this.autenticacionService.login(this.credentialsForm.value).subscribe();
   }
  
-  register() {
-    this.autenticacionService.registro(this.credentialsForm.value).subscribe(res => {
-      // Call Login to automatically login the new user
-      this.autenticacionService.login(this.credentialsForm.value).subscribe();
-    });
-  }
+  
 
 }
